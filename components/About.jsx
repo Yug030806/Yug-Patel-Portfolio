@@ -91,8 +91,7 @@ export default function About() {
               <strong>AI, intelligent systems and full-stack web development.</strong>
             </p>
             <p>
-              I learn by building — from warehouse automation and NLP applications
-              to polished web experiences. I&apos;m especially interested in understanding
+              I&apos;m especially interested in understanding
               how technology can solve real-world problems.
             </p>
           </div>

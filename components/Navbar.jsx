@@ -44,15 +44,75 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
 
-  // Lock scroll when mobile menu is open
+  // Lock background scroll, prevent touch leaking, and avoid layout shifts when mobile menu is open
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    if (!mobileOpen) return;
+
+    // Calculate scrollbar width to prevent layout jump
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+    const originalBodyPadding = document.body.style.paddingRight;
+    const originalOverscroll = document.documentElement.style.overscrollBehavior;
+
+    // Lock both root and body to fully stop background scrolling
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overscrollBehavior = "none";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
+
+    // Touch event listener to prevent background rubber-banding on touch devices
+    const handleTouchMove = (e) => {
+      const menu = document.querySelector(".mobile-nav-menu");
+      if (menu && menu.contains(e.target)) {
+        // If the menu content fits inside without scrolling, prevent default swipe
+        if (menu.scrollHeight <= menu.clientHeight) {
+          e.preventDefault();
+        }
+      } else {
+        // Any drag on overlay/backdrop must not move the background
+        e.preventDefault();
+      }
+    };
+
+    // Wheel event listener to prevent background movement via mouse wheel
+    const handleWheel = (e) => {
+      const menu = document.querySelector(".mobile-nav-menu");
+      if (!menu || !menu.contains(e.target)) {
+        e.preventDefault();
+      }
+    };
+
+    // Auto-close on escape key
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    // Auto-close if screen resized to desktop viewport
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = originalHtmlOverflow;
+      document.body.style.overflow = originalBodyOverflow;
+      document.body.style.paddingRight = originalBodyPadding;
+      document.documentElement.style.overscrollBehavior = originalOverscroll;
+      document.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("resize", handleResize);
     };
   }, [mobileOpen]);
 
@@ -107,6 +167,7 @@ export default function Navbar() {
             </MagneticButton>
 
             <button
+              type="button"
               className="nav-mobile-toggle"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -133,6 +194,7 @@ export default function Navbar() {
               <span className="logo-text">P</span>
             </Link>
             <button
+              type="button"
               onClick={closeMenu}
               className="mobile-close-btn"
               aria-label="Close menu"

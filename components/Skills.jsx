@@ -33,10 +33,6 @@ export default function Skills() {
           <h2 className="section-heading-large">
             Technologies I <span className="text-accent">work with.</span>
           </h2>
-          <p className="section-subheading">
-            Interactive 3D rotating glass cylinders showcasing core proficiencies across programming,
-            modern frontend web, backend data systems, AI/ML pipelines, and developer tooling.
-          </p>
         </div>
       </div>
 
