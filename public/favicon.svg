@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111620" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle with subtle neon border -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="rgba(184, 255, 77, 0.35)" stroke-width="1.2" />
+
+  <!-- Logo Y • P -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-weight="900">
+    <!-- Letter Y -->
+    <text x="19" y="42.5" font-size="26" fill="#ffffff" text-anchor="middle" letter-spacing="-1">Y</text>
+    
+    <!-- Neon Lime Glowing Dot -->
+    <circle cx="32" cy="38" r="3.2" fill="#b8ff4d" filter="url(#neonGlow)" />
+    <circle cx="32" cy="38" r="2.2" fill="#ffffff" />
+
+    <!-- Letter P -->
+    <text x="45" y="42.5" font-size="26" fill="#ffffff" text-anchor="middle" letter-spacing="-1">P</text>
+  </g>
+</svg>
