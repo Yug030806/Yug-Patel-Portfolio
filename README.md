@@ -1,14 +1,12 @@
 <div align="center">
 
-# ⚡ Yug Patel — Developer Portfolio (V2)
+# ⚡ Yug Patel — Developer Portfolio 
 
 <p align="center">
   <strong>A premium dark, futuristic, minimalist portfolio engineered for high-impact software engineering, AI/ML, and full-stack opportunities.</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Yug030806/Yug-Patel-Portfolio/stargazers"><img src="https://img.shields.io/github/stars/Yug030806/Yug-Patel-Portfolio?style=for-the-badge&color=b8ff4d&logo=github&labelColor=07080a" alt="Stars" /></a>
-  <a href="https://github.com/Yug030806/Yug-Patel-Portfolio/network/members"><img src="https://img.shields.io/github/forks/Yug030806/Yug-Patel-Portfolio?style=for-the-badge&color=b8ff4d&logo=github&labelColor=07080a" alt="Forks" /></a>
   <a href="https://github.com/Yug030806/Yug-Patel-Portfolio/blob/main/package.json"><img src="https://img.shields.io/badge/Version-2.0.0-b8ff4d?style=for-the-badge&labelColor=07080a" alt="Version" /></a>
   <a href="#-status"><img src="https://img.shields.io/badge/Status-Open_To_Opportunities-00e599?style=for-the-badge&labelColor=07080a" alt="Status" /></a>
 </p>
