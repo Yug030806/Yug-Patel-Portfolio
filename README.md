@@ -37,7 +37,7 @@
 - [Featured Projects](#-featured-projects)
 - [Interactive Features & UX Polish](#-interactive-features--ux-polish)
 - [Tech Stack & Tooling](#-tech-stack--tooling)
-- [Honors & Achievements](#-honors--achievements)
+- [Honors, Achievements & Activities](#-honors-achievements--activities)
 - [Project Directory Structure](#-project-directory-structure)
 - [Getting Started](#-getting-started)
 - [Deployment](#-deployment)
@@ -155,13 +155,27 @@ Real-time integration via Next.js Route Handlers (`/api/github`) tracking public
 
 ---
 
-## 🏆 Honors & Achievements
+## 🏆 Honors, Achievements & Activities
 
 ### 🥉 3rd Prize — NLP Ignite Bootcamp
-- **Organizers**: SVIT ACM Student Chapter
+- **Organizers**: SVIT ACM Student Chapter & Computer Engineering Dept.
 - **Timeline**: August 3 – 6, 2026
-- **Project**: *AI News Summarizer & NLP Pipeline*
-- **Scope**: Awarded for designing and delivering an end-to-end NLP news summarization, sentiment extraction, and named entity classification platform.
+- **Scope**: Awarded 3rd Prize for machine learning and natural language processing exploration, sentence tokenization, and semantic analysis.
+
+### 📦 IP Cell — Logistics Core Team Member
+- **Organization**: SVIT Intellectual Property (IP) Cell
+- **Scope**: Logistics Core Team Member managing resource coordination, venue setups, and operations for institutional patent workshops and IP awareness seminars.
+
+### 🎙️ TEDxSVIT — Admin & Logistics Core Team Member
+- **Organization**: TEDxSVIT Conference
+- **Scope**: Admin & Logistics Core Team Member leading front-desk registrations, guest speaker hospitality, delegate material distribution, and live stage/hall operations.
+
+### 🚀 Hackathons / SIH Participation — Finalist in MECIA HACKS 3.O
+- **Scope**: Finalist in MECIA HACKS 3.O and active competitor in national-scale hackathons including Smart India Hackathon (SIH), building rapid prototypes and pitch-ready software solutions under intense sprint deadlines.
+
+### 🌟 Unstop Campus Champion (Unstop Campus Ambassador)
+- **Organization**: Unstop (formerly Dare2Compete)
+- **Scope**: Selected as Unstop Campus Ambassador to foster campus tech culture, share national hackathon/coding challenges, and drive peer participation.
 
 ---
 
@@ -185,7 +199,7 @@ Yug-Patel-Portfolio/
 │   └── page.js                       # Primary landing page
 ├── components/
 │   ├── About.jsx                     # Bio, education facts & 4 core focus area cards
-│   ├── Achievement.jsx               # NLP Ignite Bootcamp award & certificate modal
+│   ├── Achievement.jsx               # Honors, awards & activities showcase with certificate modal
 │   ├── Contact.jsx                   # High-conversion CTA with instant email copy & socials
 │   ├── CustomCursor.jsx              # Lerping dual-ring pointer with dynamic 'VIEW' state
 │   ├── Footer.jsx                    # Minimalist developer footer with smooth back-to-top
@@ -200,6 +214,7 @@ Yug-Patel-Portfolio/
 │   ├── ProjectVisuals.jsx            # Bespoke SVG diagrams & telemetry visuals
 │   └── Skills.jsx                    # Filterable skill category matrix
 ├── data/
+│   ├── achievementsData.js           # Honors, hackathons, and campus leadership activities data
 │   ├── projectsData.js               # Complete case study documentation & architecture data
 │   └── skillsData.js                 # Categorized skills matrix with contextual tags
 └── public/

@@ -2932,6 +2932,283 @@ button {
 }
 
 /* ==================================================
+   ACHIEVEMENTS & ACTIVITIES EXTENSIONS
+================================================== */
+.achievement-filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.achievement-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.achievement-filter-btn:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.achievement-filter-btn.active {
+  background: var(--accent);
+  color: #07080a;
+  border-color: var(--accent);
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(184, 255, 77, 0.28);
+}
+
+.filter-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+.achievement-filter-btn.active .filter-count-badge {
+  background: rgba(0, 0, 0, 0.2);
+  color: #07080a;
+}
+
+.activities-container {
+  margin-top: 36px;
+}
+
+.activities-section-divider {
+  margin-top: 52px;
+  margin-bottom: 28px;
+}
+
+.activities-subhead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.activities-subhead-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subhead-pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.activities-subhead-title {
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0;
+}
+
+.activities-subhead-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.activity-card {
+  position: relative;
+  background: rgba(13, 17, 24, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.activity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--card-accent, var(--accent)), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.activity-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.activity-card:hover::before {
+  opacity: 1;
+}
+
+.activity-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.activity-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.activity-icon-pod {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.activity-card:hover .activity-icon-pod {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.activity-org-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.activity-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.activity-badge-pill {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.activity-role-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.activity-role-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.activity-role-text {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.activity-card-desc {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.activity-tags-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.activity-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.activity-card:hover .activity-tag {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* ==================================================
    CONTACT SECTION
 ================================================== */
 .contact-card-box {
@@ -3793,6 +4070,17 @@ button {
     gap: 40px;
   }
 
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .activities-subhead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   .case-split-blocks {
     grid-template-columns: 1fr;
   }
@@ -3863,6 +4151,14 @@ button {
 
   .achievement-feature-box {
     padding: 30px 20px;
+  }
+
+  .activity-card {
+    padding: 22px 20px;
+  }
+
+  .activity-card-header {
+    flex-wrap: wrap;
   }
 
   .contact-card-box {
