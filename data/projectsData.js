@@ -1,8 +1,212 @@
 export const projects = [
   {
+    id: "packsmart-ai",
+    slug: "packsmart-ai",
+    number: "01",
+    title: "PackSmart AI — Food Packaging & Barrier Physics Platform",
+    category: "AI • Thermodynamic Physics • Multi-Objective ML",
+    shortDescription:
+      "An enterprise AI SaaS platform combining food biochemistry, ASTM barrier permeation physics, and multi-objective Pareto optimization to specify optimal food packaging substrates and shelf life.",
+    fullDescription:
+      "An enterprise AI SaaS & ASTM barrier physics platform engineered for commercial food manufacturing and sustainable FMCG packaging. PackSmart AI replaces trial-and-error material selection with thermodynamic transport physics, coupled Arrhenius degradation kinetics, and multi-objective constrained Pareto optimization to calculate exact permissible OTR/WVTR barrier thresholds, predict multi-pathway shelf life, and optimize unit packaging economics.",
+    role: "Full-stack architecture, biophysical & kinetic modeling, ML pipeline, and ASTM barrier physics implementation",
+    roleType: "Lead Full-Stack & AI Systems Developer",
+    status: "Live in Production",
+    featured: true,
+    github: "https://github.com/Yug030806/PackSmart-AI",
+    live: "https://pack-smart-ai-three.vercel.app",
+    tech: [
+      "Python 3.13",
+      "FastAPI",
+      "React 18",
+      "Vite",
+      "Scikit-learn",
+      "ASTM D3985 / F1249",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    overview:
+      "In commercial food manufacturing and FMCG packaging, material selection has historically relied on trial-and-error, qualitative supplier terms ('High Barrier'), or static spreadsheets. PackSmart AI integrates food biochemistry, thermodynamic transport physics, and multi-objective machine learning into an interactive platform that computes exact gas/vapor barrier thresholds, models coupled degradation kinetics, and outputs verified Pareto-optimal packaging specifications.",
+    problem:
+      "Traditional packaging specification suffers from two costly failure modes: under-packaging (trimming $0.01 from barrier film triggers moisture gain or rancidity, causing over $0.25/pack in spoilage write-offs and brand erosion) and over-packaging (over-specifying expensive non-recyclable multi-material foils, inflating polymer resin spending and carbon liabilities). Packaging engineers lack an integrated platform calculating permissible OTR and WVTR from first principles.",
+    solution:
+      "Engineered a full-stack platform pairing a FastAPI scientific backend with a responsive React frontend. Built thermodynamic transport equations for ASTM D3985 (OTR) and ASTM F1249 (WVTR), coupled Arrhenius degradation kinetics (microbial, lipid oxidation, moisture staling), an Equilibrium MAP gas solver, and a 4-tier Pareto optimization engine resolving trade-offs across shelf life, unit cost, and quantitative LCA circularity.",
+    keyFeatures: [
+      {
+        title: "ASTM Permeation & Barrier Thresholds",
+        description:
+          "Computes allowable oxygen transmission (OTR via ASTM D3985) and water vapor transmission (WVTR via ASTM F1249) from product water activity, fat content, and storage isotherms."
+      },
+      {
+        title: "Coupled Arrhenius Kinetics Engine",
+        description:
+          "Evaluates competing degradation pathways (microbial growth via Ratkowsky models, lipid auto-oxidation, moisture sorption) to determine the true rate-limiting spoilage horizon."
+      },
+      {
+        title: "Multi-Objective Constrained Pareto Optimizer",
+        description:
+          "Generates 4 distinct material trade-offs: Maximum Shelf Life, Lowest Total Cost, Higher Sustainability, and Balanced Solution with explicit 'Why this material?' decision intelligence."
+      },
+      {
+        title: "3-Tier Hierarchical RBAC & Audit Trails",
+        description:
+          "Enforces enterprise security across Super Admin, System Manager, and Standard User roles with JWT authentication, privilege matrices, and real-time security audit logging."
+      }
+    ],
+    architecture: [
+      {
+        phase: "Biochemical & Environmental Ingestion",
+        detail:
+          "Captures food moisture, fat composition, water activity, package dimensions, storage temperature, and ambient RH."
+      },
+      {
+        phase: "Thermodynamic & Permeation Physics",
+        detail:
+          "FastAPI backend calculates critical Δ[O2] and ΔM thresholds, scaling permeation via Arrhenius Q10 kinetics and Tetens vapor equations."
+      },
+      {
+        phase: "Machine Learning & Pareto Optimization",
+        detail:
+          "MultiOutput Random Forest regressor scores certified substrates against the multi-material frontier to identify non-dominated Pareto alternatives."
+      },
+      {
+        phase: "Interactive SaaS & Verification Delivery",
+        detail:
+          "React frontend delivers a 5-step guided wizard, 'What-If' scenario simulator, live telemetry stream, and downloadable PDF technical specifications."
+      }
+    ],
+    contributionDetails: [
+      "Architected the dual-engine architecture: Python FastAPI scientific backend + React 18 / Vite frontend.",
+      "Implemented mathematical formulations for ASTM D3985 OTR, ASTM F1249 WVTR, and GAB sorption isotherms.",
+      "Constructed the coupled Arrhenius shelf-life predictor factoring microbial, oxidation, and moisture degradation.",
+      "Designed the 4-choice Pareto trade-off optimization solver balancing barrier performance, packaging cost, and LCA circularity.",
+      "Integrated Supabase PostgreSQL database, JWT authentication, and 3-tier Role-Based Access Control.",
+      "Created the dark-mode packaging SaaS UI with interactive parameter sliders, real-time kinetic visualizers, and PDF export."
+    ],
+    challenges: [
+      {
+        challenge: "Coupling Multiphase Degradation Kinetics",
+        solution:
+          "Implemented a unified minimum-envelope solver evaluating microbial, lipid auto-oxidation, and moisture gain simultaneously to identify the exact rate-limiting failure mode."
+      },
+      {
+        challenge: "Offline & High-Latency Network Resilience",
+        solution:
+          "Engineered a local thermodynamic fallback engine running in-browser Fickian diffusion models with an 8-second request ceiling and React ErrorBoundary shields."
+      }
+    ],
+    nextProject: {
+      slug: "hillora",
+      title: "Hillora — Alpine Tourism & Mobility Platform"
+    }
+  },
+  {
+    id: "hillora",
+    slug: "hillora",
+    number: "02",
+    title: "Hillora — Alpine Tourism & Mobility Platform",
+    category: "AI • Alpine Tourism • RBAC Ecosystem",
+    shortDescription:
+      "An AI-powered alpine tourism and mobility ecosystem for Himachal Pradesh featuring smart itinerary synthesis, mountain elevation calculators, hyper-local partner portals, and transparent mobility networks.",
+    fullDescription:
+      "A hyper-local alpine tourism and mobility ecosystem designed for the mountain geography of Himachal Pradesh. Hillora solves the challenges of mountain over-tourism and economic leakage by integrating an AI itinerary synthesizer, realistic hill-station transit calculators, four dedicated role portals (Traveler, Local Partner, Mobility Partner, SuperAdmin), and an atmospheric Alpine Glassmorphism UI.",
+    role: "Full-stack development, Alpine Glassmorphism UI/UX, RBAC architecture & AI itinerary synthesizer",
+    roleType: "Lead Full-Stack Developer & UI/UX Designer",
+    status: "Live in Production",
+    featured: true,
+    github: "https://github.com/Yug030806/Hillora",
+    live: "https://hillora.vercel.app",
+    tech: [
+      "React 18",
+      "Vite 7",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lucide React",
+      "React Router DOM",
+      "Context API (RBAC)",
+      "Alpine Glassmorphism"
+    ],
+    overview:
+      "Mountain tourist destinations like Manali suffer from severe economic leakage, uncalibrated travel itineraries that ignore winding hairpin roads, and fragmented local transport. Hillora creates a unified ecosystem connecting travelers directly with authentic local merchants, verified 4x4 mountain drivers, and transparent mountain transit while maximizing local economic retention (targeting 90%+ local spend).",
+    problem:
+      "Standard travel aggregators fail in high-altitude mountain environments: they assume linear highway speeds ignoring steep elevation gradients, extract hefty commissions that drain revenue away from native Himachali businesses, and leave travelers vulnerable to seasonal transport price gouging and sudden weather landslides.",
+    solution:
+      "Developed Hillora as a role-isolated alpine platform featuring an AI trip synthesizer with mountain gradient and hairpin-turn timing adjustments, a Local Economic Retention tracker, a Fair Fare engine for high-altitude passes (Rohtang, Solang, Atal Tunnel), and 4 specialized role portals with 1-click RBAC switching.",
+    keyFeatures: [
+      {
+        title: "AI Itinerary Synthesizer",
+        description:
+          "Generates realistic mountain itineraries factoring available hours, budget, interests, walking gradients, and high-altitude hairpin turns."
+      },
+      {
+        title: "Hyper-Local Partner & Café Portal",
+        description:
+          "Dedicated business management interface for heritage cafés (e.g., Café 1947 in Old Manali), homestays, and Himachali Dham kitchens with live booking feeds."
+      },
+      {
+        title: "Mobility Partner Network & Fair Fares",
+        description:
+          "Fleet management for registered 4x4 Gypsy cabs and valley shuttles with transparent flat-rate pricing for Rohtang Pass, Solang Valley, and Atal Tunnel."
+      },
+      {
+        title: "Alpine Glassmorphism Design System",
+        description:
+          "Atmospheric visual design featuring live Himalayan parallax photography, multi-tier CSS mountain mist drifts, and ultra-frosted 24px backdrop blur panels."
+      }
+    ],
+    architecture: [
+      {
+        phase: "Authentication & Role Gate",
+        detail:
+          "React Context API with RBAC router guards isolates Traveler, Local Partner, Mobility Partner, and SuperAdmin clearance levels."
+      },
+      {
+        phase: "AI Synthesis & Terrain Calculation",
+        detail:
+          "Evaluates destination coordinates against altitude differentials and road geometry to compute feasible mountain travel timelines."
+      },
+      {
+        phase: "Local Economic Retention Modeling",
+        detail:
+          "Tracks traveler expenditures across native merchants to ensure 90%+ of capital stays within native Himachali mountain communities."
+      },
+      {
+        phase: "SuperAdmin Audit & Emergency Broadcast",
+        detail:
+          "Master dashboard tracking platform GMV, license verification queues, and regional weather/landslide advisory broadcasts."
+      }
+    ],
+    contributionDetails: [
+      "Architected and built the entire frontend application using React 18, Vite 7, and Tailwind CSS.",
+      "Crafted the custom Alpine Glassmorphism design system featuring CSS mountain mist animations and frosted glass cards.",
+      "Implemented 4-tier Role-Based Access Control (RBAC) with ProtectedRoute guards and a 1-click administrative role switcher.",
+      "Engineered the AI trip planner module with altitude-aware transit estimators and local economic retention calculations.",
+      "Integrated the Manali pilot geo-registry featuring real heritage cafés, 4x4 mountain transit routes, and scenic spots.",
+      "Deployed the production build on Vercel with zero-config edge performance."
+    ],
+    challenges: [
+      {
+        challenge: "Accurate Transit Modeling in High-Altitude Terrain",
+        solution:
+          "Replaced flat 2D distance calculations with mountain gradient friction multipliers to account for steep ascents and hairpin switchbacks."
+      },
+      {
+        challenge: "Layered Glassmorphism Performance",
+        solution:
+          "Optimized backdrop filters and GPU-accelerated CSS transforms to ensure smooth 60fps parallax scrolling across mobile and desktop displays."
+      }
+    ],
+    nextProject: {
+      slug: "smart-warehouse",
+      title: "Smart Warehouse Automation System"
+    }
+  },
+  {
     id: "smart-warehouse",
     slug: "smart-warehouse",
-    number: "01",
+    number: "03",
     title: "Smart Warehouse Automation System",
     category: "AI • Automation • Algorithms",
     shortDescription:
@@ -100,7 +304,7 @@ export const projects = [
   {
     id: "ai-news-summarizer",
     slug: "ai-news-summarizer",
-    number: "02",
+    number: "04",
     title: "AI News Summarizer",
     category: "NLP • Machine Learning • Research",
     shortDescription:
@@ -198,7 +402,7 @@ export const projects = [
   {
     id: "beingstrong-fitness",
     slug: "beingstrong-fitness",
-    number: "03",
+    number: "05",
     title: "The BeingStrong Fitness",
     category: "Web Development • UI/UX",
     shortDescription:
@@ -287,8 +491,8 @@ export const projects = [
       }
     ],
     nextProject: {
-      slug: "smart-warehouse",
-      title: "Smart Warehouse Automation System"
+      slug: "packsmart-ai",
+      title: "PackSmart AI — Food Packaging & Barrier Physics Platform"
     }
   }
 ];

@@ -1990,6 +1990,267 @@ button {
   line-height: 1.2;
 }
 
+/* 4. PackSmart AI Clean Preview */
+.packsmart-clean-preview {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 118px;
+  gap: 8px;
+}
+
+.packsmart-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.packsmart-metric-box {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.metric-tag {
+  font-family: var(--mono);
+  font-size: 7px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.metric-val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.metric-val-row .val-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.metric-val-row .val-unit {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  color: var(--text-dim);
+}
+
+.metric-status.passed {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.packsmart-hero-chip {
+  position: relative;
+  background: rgba(184, 255, 77, 0.05);
+  border: 1px solid rgba(184, 255, 77, 0.28);
+  border-radius: 8px;
+  padding: 6px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.chip-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(184, 255, 77, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.chip-badge-label {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.chip-material {
+  font-size: 9px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1px;
+  line-height: 1.2;
+}
+
+.chip-sub {
+  font-family: var(--mono);
+  font-size: 7px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.packsmart-bottom-tags {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.ps-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 8px;
+  color: var(--text-dim);
+}
+
+.ps-pill .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.ps-pill .dot.emerald { background: #10b981; }
+.ps-pill .dot.cyan { background: #38bdf8; }
+.ps-pill .dot.amber { background: #fbbf24; }
+
+/* 5. Hillora Clean Preview */
+.hillora-clean-preview {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 118px;
+  gap: 8px;
+}
+
+.hillora-route-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.route-endpoints {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.route-arrow {
+  color: var(--accent);
+  font-size: 8px;
+}
+
+.altitude-tag {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  color: var(--accent);
+  background: rgba(184, 255, 77, 0.08);
+  border: 1px solid var(--accent-border);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.route-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.rm-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.rm-lbl {
+  font-family: var(--mono);
+  font-size: 7px;
+  color: var(--muted);
+}
+
+.rm-val {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rm-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--line);
+}
+
+.hillora-roles-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.role-tag {
+  font-family: var(--mono);
+  font-size: 7.5px;
+  text-align: center;
+  padding: 3px 2px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-dim);
+}
+
+.role-tag.emerald {
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.role-tag.amber {
+  border-color: rgba(251, 191, 36, 0.25);
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.06);
+}
+
+.role-tag.blue {
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.role-tag.purple {
+  border-color: rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.06);
+}
+
 /* ==================================================
    GITHUB STATS SECTION
 ================================================== */

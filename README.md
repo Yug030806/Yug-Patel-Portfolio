@@ -76,6 +76,8 @@ A curated selection of technical solutions spanning algorithm design, natural la
 
 | Project | Domain / Stack | Key Highlights | Links |
 | :--- | :--- | :--- | :---: |
+| **PackSmart AI** | `Python 3.13` `FastAPI` `React 18` `Vite` `Scikit-learn` `ASTM Physics` `Supabase` | • ASTM D3985 & F1249 permeation physics & permissible barrier thresholds<br>• Coupled Arrhenius degradation kinetics (microbial, oxidation, moisture)<br>• Multi-objective constrained Pareto optimizer with 'Why this material?' intelligence<br>• Enterprise 3-tier hierarchical RBAC, JWT auth, and live telemetry stream | [🌐 Live Demo](https://pack-smart-ai-three.vercel.app) • [💻 Repo](https://github.com/Yug030806/PackSmart-AI) |
+| **Hillora** | `React 18` `Vite 7` `Tailwind CSS` `Framer Motion` `Context RBAC` `Alpine Glassmorphism` | • Hyper-local mountain tourism & mobility ecosystem for Himachal Pradesh<br>• AI itinerary synthesizer calibrated for high-altitude terrain & hairpin turns<br>• Local economic retention tracker (90%+ native business spend model)<br>• 4-tier role portals (Traveler, Local Partner, Mobility 4x4, SuperAdmin) | [🌐 Live Demo](https://hillora.vercel.app) • [💻 Repo](https://github.com/Yug030806/Hillora) |
 | **Smart Warehouse Automation System** | `Next.js` `TypeScript` `A* Pathfinding` `Supabase` `PostgreSQL` | • Multi-floor A* pathfinding algorithm with elevator node transitions<br>• Interactive AMR autonomous vehicle dispatch simulation<br>• Tokenized QR code checkpoint custody verification<br>• Real-time fleet metrics and audit trail logging in Supabase | [🌐 Live Demo](https://smart-warehouse-automation-system.vercel.app) • [💻 Repo](https://github.com/Yug030806/Smart-Warehouse-Automation-System) |
 | **AI News Summarizer** | `Python` `Flask` `spaCy` `NLTK` `Scikit-learn` `NLP` | • Classical NLP & text summarization pipeline (extractive & abstractive)<br>• spaCy Named Entity Recognition (NER) for actors and organizations<br>• Sentiment polarity & subjectivity classification scoring<br>• 🥉 **3rd Prize Winner** at NLP Ignite Bootcamp (SVIT ACM) | [🌐 Live Demo](https://ai-news-summarizer-sigma.vercel.app) • [💻 Repo](https://github.com/mayank018-tech/AI-News-summarizer) |
 | **The BeingStrong Fitness** | `Next.js` `React` `Tailwind CSS` `Framer Motion` `Vercel` | • Modern athletic digital experience with fluid clamp typography<br>• GPU-accelerated Framer Motion scroll choreographies<br>• Highly composable, accessible component architecture<br>• Deployed on Vercel with near-instant Lighthouse loading speeds | [🌐 Live Demo](https://the-being-strong-fitness.vercel.app/) • [💻 Repo](https://github.com/Yug030806/The-BeingStrong-Fitness) |
@@ -188,6 +190,10 @@ Yug-Patel-Portfolio/
 │   │   └── github/
 │   │       └── route.js              # Cached GitHub stats endpoint with fallback
 │   ├── projects/
+│   │   ├── packsmart-ai/
+│   │   │   └── page.js               # PackSmart AI ASTM physics & SaaS case study
+│   │   ├── hillora/
+│   │   │   └── page.js               # Hillora Alpine tourism & mobility case study
 │   │   ├── smart-warehouse/
 │   │   │   └── page.js               # Smart Warehouse deep-dive case study
 │   │   ├── ai-news-summarizer/

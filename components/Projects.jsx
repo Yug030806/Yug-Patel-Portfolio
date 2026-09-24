@@ -17,12 +17,12 @@ export default function Projects() {
             Projects that <span className="text-accent">solve something.</span>
           </h2>
           <p className="section-subheading">
-            Three production and research builds: multi-floor pathfinding algorithms, NLP extraction pipelines, and modern web apps.
+            Five production and research builds: thermodynamic packaging physics, alpine mobility platforms, multi-floor pathfinding algorithms, NLP extraction pipelines, and modern web apps.
           </p>
         </div>
 
         <div className="projects-count-pill">
-          <span className="count-number">03</span>
+          <span className="count-number">{projects.length.toString().padStart(2, "0")}</span>
           <span className="count-label">BUILDS</span>
         </div>
       </div>

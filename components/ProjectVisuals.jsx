@@ -4,7 +4,10 @@ import {
   Cpu,
   Sparkles,
   Dumbbell,
-  BrainCircuit
+  BrainCircuit,
+  ShieldCheck,
+  Compass,
+  Mountain
 } from "lucide-react";
 
 export function WarehouseVisual() {
@@ -196,8 +199,117 @@ export function BeingStrongVisual() {
   );
 }
 
+export function PackSmartVisual() {
+  return (
+    <div className="project-custom-visual packsmart-visual" aria-hidden="true">
+      <div className="visual-grid-bg" />
+
+      {/* Clean Minimal Header */}
+      <div className="visual-header-minimal">
+        <div className="visual-title-badge">
+          <ShieldCheck size={12} className="text-accent" />
+          <span>PackSmart AI • ASTM Engine</span>
+        </div>
+        <span className="visual-sub-tag">ASTM D3985 / F1249</span>
+      </div>
+
+      {/* Biophysics & Optimization Preview */}
+      <div className="packsmart-clean-preview">
+        <div className="packsmart-metrics-row">
+          <div className="packsmart-metric-box">
+            <span className="metric-tag">O₂ PERMEATION</span>
+            <div className="metric-val-row">
+              <span className="val-text">2.21</span>
+              <span className="val-unit">cc/m²·d</span>
+            </div>
+            <span className="metric-status passed">PASS ≤ 12.6</span>
+          </div>
+
+          <div className="packsmart-hero-chip">
+            <div className="chip-glow" />
+            <div className="chip-badge-label">PARETO OPTIMAL</div>
+            <span className="chip-material">Metallized Film (BOPP)</span>
+            <span className="chip-sub">156d Shelf Life • Grade B Circular</span>
+          </div>
+
+          <div className="packsmart-metric-box">
+            <span className="metric-tag">H₂O VAPOR (WVTR)</span>
+            <div className="metric-val-row">
+              <span className="val-text">0.88</span>
+              <span className="val-unit">g/m²·d</span>
+            </div>
+            <span className="metric-status passed">PASS ≤ 1.14</span>
+          </div>
+        </div>
+
+        <div className="packsmart-bottom-tags">
+          <span className="ps-pill"><span className="dot emerald" /> Arrhenius Kinetics</span>
+          <span className="ps-pill"><span className="dot cyan" /> EMAP Respiration</span>
+          <span className="ps-pill"><span className="dot amber" /> 3-Tier RBAC</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function HilloraVisual() {
+  return (
+    <div className="project-custom-visual hillora-visual" aria-hidden="true">
+      <div className="visual-grid-bg" />
+
+      {/* Clean Minimal Header */}
+      <div className="visual-header-minimal">
+        <div className="visual-title-badge">
+          <Compass size={12} className="text-accent" />
+          <span>Hillora • Alpine Tourism</span>
+        </div>
+        <span className="visual-sub-tag">Himachal Pilot</span>
+      </div>
+
+      {/* Alpine Mountain & Transit Preview */}
+      <div className="hillora-clean-preview">
+        {/* Transit altitude strip */}
+        <div className="hillora-route-card">
+          <div className="route-header">
+            <div className="route-endpoints">
+              <Mountain size={11} className="text-accent" />
+              <span className="point start">Old Manali (2,050m)</span>
+              <span className="route-arrow">➔</span>
+              <span className="point end">Solang / Rohtang (3,978m)</span>
+            </div>
+            <span className="altitude-tag">Terrain Calibrated</span>
+          </div>
+          <div className="route-metrics">
+            <div className="rm-item">
+              <span className="rm-lbl">LOCAL RETENTION</span>
+              <span className="rm-val text-accent">94% Community Spend</span>
+            </div>
+            <div className="rm-divider" />
+            <div className="rm-item">
+              <span className="rm-lbl">MOBILITY NETWORK</span>
+              <span className="rm-val">4x4 Mountain Fleet</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Role Portals Strip */}
+        <div className="hillora-roles-strip">
+          <span className="role-tag emerald">Traveler</span>
+          <span className="role-tag amber">Local Partner</span>
+          <span className="role-tag blue">Mobility 4x4</span>
+          <span className="role-tag purple">SuperAdmin</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectVisual({ slug }) {
   switch (slug) {
+    case "packsmart-ai":
+      return <PackSmartVisual />;
+    case "hillora":
+      return <HilloraVisual />;
     case "smart-warehouse":
       return <WarehouseVisual />;
     case "ai-news-summarizer":
