@@ -13,7 +13,8 @@ import {
   Boxes,
   Mic2,
   Rocket,
-  Users
+  Users,
+  Podcast
 } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 import { featuredAchievement, activitiesData } from "../data/achievementsData";
@@ -22,13 +23,14 @@ const ACTIVITY_ICONS = {
   Boxes,
   Mic2,
   Rocket,
-  Users
+  Users,
+  Podcast
 };
 
 const FILTERS = [
-  { id: "all", label: "All Recognitions", count: 5 },
+  { id: "all", label: "All Recognitions", count: activitiesData.length + 1 },
   { id: "achievements", label: "Awards & Honors", count: 1 },
-  { id: "activities", label: "Activities & Leadership", count: 4 }
+  { id: "activities", label: "Activities & Leadership", count: activitiesData.length }
 ];
 
 export default function Achievement() {
@@ -59,7 +61,9 @@ export default function Achievement() {
           </div>
 
           <div className="projects-count-pill">
-            <span className="count-number">05</span>
+            <span className="count-number">
+              {String(activitiesData.length + 1).padStart(2, "0")}
+            </span>
             <span className="count-label">MILESTONES</span>
           </div>
         </div>
@@ -192,7 +196,9 @@ export default function Achievement() {
                     <span className="subhead-pill">LEADERSHIP &amp; CO-CURRICULAR</span>
                     <h3 className="activities-subhead-title">Roles &amp; Participations</h3>
                   </div>
-                  <span className="activities-subhead-tag">4 Active Engagements</span>
+                  <span className="activities-subhead-tag">
+                    {activitiesData.length} Active Engagements
+                  </span>
                 </div>
               </div>
             )}
@@ -214,16 +220,33 @@ export default function Achievement() {
                       {/* Card Header */}
                       <div className="activity-card-header">
                         <div className="activity-header-left">
-                          <div
-                            className="activity-icon-pod"
-                            style={{
-                              color: act.accentColor,
-                              backgroundColor: `${act.accentColor}14`,
-                              borderColor: `${act.accentColor}35`
-                            }}
-                          >
-                            <IconComponent size={20} />
-                          </div>
+                          {act.logo ? (
+                            <div
+                              className={`activity-logo-pod ${act.logoWide ? "activity-logo-pod-wide" : ""}`}
+                              style={{
+                                backgroundColor: act.logoBg || "rgba(255, 255, 255, 0.05)",
+                                borderColor: `${act.accentColor}35`
+                              }}
+                            >
+                              <img
+                                src={act.logo}
+                                alt={`${act.title} logo`}
+                                className="activity-logo-img"
+                                loading="lazy"
+                              />
+                            </div>
+                          ) : (
+                            <div
+                              className="activity-icon-pod"
+                              style={{
+                                color: act.accentColor,
+                                backgroundColor: `${act.accentColor}14`,
+                                borderColor: `${act.accentColor}35`
+                              }}
+                            >
+                              <IconComponent size={20} />
+                            </div>
+                          )}
                           <div>
                             <span className="activity-org-label">{act.organization}</span>
                             <h4 className="activity-card-title">{act.title}</h4>

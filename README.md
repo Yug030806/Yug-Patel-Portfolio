@@ -164,6 +164,10 @@ Real-time integration via Next.js Route Handlers (`/api/github`) tracking public
 - **Timeline**: August 3 – 6, 2026
 - **Scope**: Awarded 3rd Prize for machine learning and natural language processing exploration, sentence tokenization, and semantic analysis.
 
+### 🎙️ SVIT Podcast Club (SPC) — Production Head
+- **Organization**: SVIT Podcast Club (SPC)
+- **Scope**: Production Head directing end-to-end audiovisual podcast production, multi-track studio recording, post-production editing pipelines, and technical media operations for campus talks and interview series.
+
 ### 📦 IP Cell — Logistics Core Team Member
 - **Organization**: SVIT Intellectual Property (IP) Cell
 - **Scope**: Logistics Core Team Member managing resource coordination, venue setups, and operations for institutional patent workshops and IP awareness seminars.

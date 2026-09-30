@@ -14,6 +14,22 @@ export const featuredAchievement = {
 
 export const activitiesData = [
   {
+    id: "svit-podcast-club",
+    title: "SVIT Podcast Club (SPC)",
+    role: "Production Head",
+    fullTitle: "SVIT Podcast Club (SPC) — Production Head",
+    organization: "SVIT Podcast Club (SPC)",
+    category: "Media & Production",
+    badge: "PRODUCTION HEAD",
+    iconName: "Podcast",
+    logo: "/logos/spc-podcast.png",
+    logoBg: "rgba(255, 255, 255, 0.04)",
+    accentColor: "#f97316",
+    description:
+      "Production Head leading audiovisual production, studio recording setups, audio/video editing pipelines, and technical direction for the official SVIT Podcast Club (SPC). Directing studio operations, multi-camera capture, sound engineering, and creative digital media distribution for campus interviews and talk shows.",
+    tags: ["Production Head", "Podcast Production", "Audio & Video", "Studio Direction", "SPC"]
+  },
+  {
     id: "ip-cell",
     title: "IP Cell",
     role: "Logistics Core Team Member",
@@ -22,6 +38,8 @@ export const activitiesData = [
     category: "Logistics & Operations",
     badge: "CORE TEAM MEMBER",
     iconName: "Boxes",
+    logo: "/logos/ip-cell.png",
+    logoBg: "#ffffff",
     accentColor: "#38bdf8",
     description:
       "Core team member managing logistics planning, resource mobilization, and on-site operational coordination for institutional IP awareness sessions, patent workshops, and seminars. Handled venue setup, attendee onboarding, and departmental resource alignment.",
@@ -36,6 +54,9 @@ export const activitiesData = [
     category: "Admin & Logistics",
     badge: "CORE TEAM MEMBER",
     iconName: "Mic2",
+    logo: "/logos/tedx-svit.png",
+    logoBg: "rgba(255, 255, 255, 0.04)",
+    logoWide: true,
     accentColor: "#f43f5e",
     description:
       "Core team member leading administrative front-desk operations, delegate registration accreditation, kit distributions, and hall logistics for TEDxSVIT. Facilitated guest speaker hospitality, backstage session timing cues, and crowd management during live talks.",
@@ -50,6 +71,8 @@ export const activitiesData = [
     category: "Competitive Innovation",
     badge: "HACKATHON FINALIST",
     iconName: "Rocket",
+    logo: "/logos/hackathons-sih.png",
+    logoBg: "#ffffff",
     accentColor: "#b8ff4d",
     description:
       "Finalist in MECIA HACKS 3.O and active participant in competitive hackathons including the Smart India Hackathon (SIH), building scalable software prototypes, AI-driven solutions, and collaborative systems under intense time-constrained sprint environments.",
@@ -64,6 +87,9 @@ export const activitiesData = [
     category: "Campus Leadership",
     badge: "CAMPUS AMBASSADOR",
     iconName: "Users",
+    logo: "/logos/unstop.png",
+    logoBg: "#1c4980",
+    logoWide: true,
     accentColor: "#a855f7",
     description:
       "Selected as Unstop Campus Champion (Unstop Campus Ambassador), fostering tech community growth, promoting national hackathons, coding competitions, and empowering student developers to build competitive problem-solving credentials.",

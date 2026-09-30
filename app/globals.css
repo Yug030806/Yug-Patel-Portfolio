@@ -3379,6 +3379,40 @@ button {
   transform: scale(1.08) rotate(3deg);
 }
 
+.activity-logo-pod {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.activity-logo-pod.activity-logo-pod-wide {
+  width: 72px;
+  padding: 4px 8px;
+}
+
+.activity-card:hover .activity-logo-pod {
+  transform: scale(1.08) translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.activity-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .activity-org-label {
   display: block;
   font-family: var(--mono);
