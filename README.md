@@ -165,11 +165,15 @@ Real-time integration via Next.js Route Handlers (`/api/github`) tracking public
 - **Scope**: Awarded 3rd Prize for machine learning and natural language processing exploration, sentence tokenization, and semantic analysis.
 
 ### 🎙️ SVIT Podcast Club (SPC) — Production Head
-- **Organization**: SVIT Podcast Club (SPC)
+- **Organization**: SVIT Podcast Club (SPC) • SVIT Vasad
 - **Scope**: Production Head directing end-to-end audiovisual podcast production, multi-track studio recording, post-production editing pipelines, and technical media operations for campus talks and interview series.
 
+### 👾 Praxis Club — Event Management Core Team Member
+- **Organization**: Praxis Club • SVIT Vasad
+- **Scope**: Core Team Member in Event Management directing workshop timelines, coding challenge logistics, stage coordination, and on-ground execution for campus technical symposiums.
+
 ### 📦 IP Cell — Logistics Core Team Member
-- **Organization**: SVIT Intellectual Property (IP) Cell
+- **Organization**: SVIT Intellectual Property (IP) Cell • SVIT Vasad
 - **Scope**: Logistics Core Team Member managing resource coordination, venue setups, and operations for institutional patent workshops and IP awareness seminars.
 
 ### 🎙️ TEDxSVIT — Admin & Logistics Core Team Member

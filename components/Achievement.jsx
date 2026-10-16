@@ -24,7 +24,9 @@ const ACTIVITY_ICONS = {
   Mic2,
   Rocket,
   Users,
-  Podcast
+  Podcast,
+  Calendar,
+  Sparkles
 };
 
 const FILTERS = [
