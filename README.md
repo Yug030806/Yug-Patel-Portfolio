@@ -172,9 +172,9 @@ Real-time integration via Next.js Route Handlers (`/api/github`) tracking public
 - **Organization**: Praxis Club • SVIT Vasad
 - **Scope**: Core Team Member in Event Management directing workshop timelines, coding challenge logistics, stage coordination, and on-ground execution for campus technical symposiums.
 
-### 📦 IP Cell — Logistics Core Team Member
+### 📦 IP Cell — Admin and Logistics Core Team Member
 - **Organization**: SVIT Intellectual Property (IP) Cell • SVIT Vasad
-- **Scope**: Logistics Core Team Member managing resource coordination, venue setups, and operations for institutional patent workshops and IP awareness seminars.
+- **Scope**: Admin and Logistics Core Team Member managing resource coordination, venue setups, and operations for institutional patent workshops and IP awareness seminars.
 
 ### 🎙️ TEDxSVIT — Admin & Logistics Core Team Member
 - **Organization**: TEDxSVIT Conference

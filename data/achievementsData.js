@@ -49,10 +49,10 @@ export const activitiesData = [
   {
     id: "ip-cell",
     title: "IP Cell",
-    role: "Logistics Core Team Member",
-    fullTitle: "IP Cell — Logistics Core Team Member",
+    role: "Admin and Logistics Core Team Member",
+    fullTitle: "IP Cell — Admin and Logistics Core Team Member",
     organization: "SVIT Intellectual Property (IP) Cell • SVIT Vasad",
-    category: "Logistics & Operations",
+    category: "Admin and Logistics",
     badge: "CORE TEAM MEMBER",
     iconName: "Boxes",
     logo: "/logos/ip-cell.png",
@@ -60,7 +60,7 @@ export const activitiesData = [
     accentColor: "#38bdf8",
     description:
       "Core team member managing logistics planning, resource mobilization, and on-site operational coordination for institutional IP awareness sessions, patent workshops, and seminars. Handled venue setup, attendee onboarding, and departmental resource alignment.",
-    tags: ["Logistics Core Team", "IP Workshops", "Operations", "Event Coordination"]
+    tags: ["Admin and Logistics Core Team", "IP Workshops", "Operations", "Event Coordination"]
   },
   {
     id: "tedx-svit",
