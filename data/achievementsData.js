@@ -1,16 +1,41 @@
-export const featuredAchievement = {
-  id: "nlp-ignite",
-  title: "NLP Ignite Bootcamp",
-  award: "3RD PRIZE WINNER",
-  medal: "🥉",
-  organizer: "SVIT ACM STUDENT CHAPTER • COMPUTER ENGINEERING DEPT.",
-  date: "3rd Aug to 6th Aug 2026",
-  topic: "Topic: Natural Language Processing",
-  description:
-    "Awarded 3rd Prize in the competitive NLP Ignite Bootcamp event organized by the SVIT ACM Student Chapter and Computer Engineering Department. The intensive bootcamp challenged participants to explore advanced natural language processing techniques, sentence tokenization, computational linguistics, and real-world semantic text analysis.",
-  certificateImage: "/certificate.jpg",
-  certificateBadge: "VERIFIED ACHIEVEMENT"
-};
+export const achievementsData = [
+  {
+    id: "nlp-ignite",
+    title: "NLP Ignite Bootcamp",
+    award: "3RD PRIZE WINNER",
+    medal: "🥉",
+    organizer: "SVIT ACM STUDENT CHAPTER • COMPUTER ENGINEERING DEPT.",
+    date: "3rd Aug to 6th Aug 2026",
+    topic: "Topic: Natural Language Processing",
+    team: null,
+    category: "Competitive Bootcamp",
+    accentColor: "#b8ff4d",
+    description:
+      "Awarded 3rd Prize in the competitive NLP Ignite Bootcamp event organized by the SVIT ACM Student Chapter and Computer Engineering Department. The intensive bootcamp challenged participants to explore advanced natural language processing techniques, sentence tokenization, computational linguistics, and real-world semantic text analysis.",
+    certificateImage: "/certificate.jpg",
+    certificateBadge: "VERIFIED ACHIEVEMENT",
+    tags: ["3rd Prize Winner", "SVIT ACM Chapter", "Natural Language Processing", "NLP Ignite"]
+  },
+  {
+    id: "mecia-hacks-3",
+    title: "MECIA HACKS 3.0",
+    award: "HACKATHON PARTICIPANT & FINALIST",
+    medal: "⚡",
+    organizer: "SVIT VASAD • RIC • SSIP • INSTITUTION'S INNOVATION COUNCIL",
+    date: "7th Sep to 8th Sep 2026",
+    topic: "Topic: 24-Hour In-Person Multidisciplinary Hackathon",
+    team: "Team HARDRESET",
+    category: "Multidisciplinary Hackathon",
+    accentColor: "#38bdf8",
+    description:
+      "Awarded Certificate of Participation in MECIA HACKS 3.0 as a member of Team HARDRESET. An intensive 24-hour in-person multidisciplinary hackathon hosted at SVIT Vasad by the Research and Innovation Centre (RIC) and SSIP under the Institution's Innovation Council (Ministry of Education Initiative), engineering rapid end-to-end prototypes under intense sprint constraints.",
+    certificateImage: "/mecia-hacks-certificate.jpg",
+    certificateBadge: "OFFICIAL CERTIFICATE",
+    tags: ["Team HARDRESET", "MECIA HACKS 3.0", "24-Hour Hackathon", "SVIT Vasad", "RIC & SSIP"]
+  }
+];
+
+export const featuredAchievement = achievementsData[0];
 
 export const activitiesData = [
   {
@@ -49,8 +74,8 @@ export const activitiesData = [
   {
     id: "ip-cell",
     title: "IP Cell",
-    role: "Admin and Logistics Core Team Member",
-    fullTitle: "IP Cell — Admin and Logistics Core Team Member",
+    role: "Former Admin and Logistics Core Team Member",
+    fullTitle: "IP Cell — Former Admin and Logistics Core Team Member",
     organization: "SVIT Intellectual Property (IP) Cell • SVIT Vasad",
     category: "Admin and Logistics",
     badge: "CORE TEAM MEMBER",
@@ -59,8 +84,8 @@ export const activitiesData = [
     logoBg: "#ffffff",
     accentColor: "#38bdf8",
     description:
-      "Core team member managing logistics planning, resource mobilization, and on-site operational coordination for institutional IP awareness sessions, patent workshops, and seminars. Handled venue setup, attendee onboarding, and departmental resource alignment.",
-    tags: ["Admin and Logistics Core Team", "IP Workshops", "Operations", "Event Coordination"]
+      "Former core team member managing logistics planning, resource mobilization, and on-site operational coordination for institutional IP awareness sessions, patent workshops, and seminars. Handled venue setup, attendee onboarding, and departmental resource alignment.",
+    tags: ["Former Admin & Logistics", "IP Workshops", "Operations", "Event Coordination"]
   },
   {
     id: "tedx-svit",
@@ -80,20 +105,20 @@ export const activitiesData = [
     tags: ["Admin & Logistics", "Core Team", "Speaker Hospitality", "Event Ops"]
   },
   {
-    id: "hackathons-sih",
-    title: "Hackathons / SIH Participation",
-    role: "Finalist in MECIA HACKS 3.O • SIH Participant",
-    fullTitle: "Hackathons / SIH Participation — Finalist in MECIA HACKS 3.O",
-    organization: "National & Regional Hackathons",
-    category: "Competitive Innovation",
-    badge: "HACKATHON FINALIST",
+    id: "smart-india-hackathon",
+    title: "Smart India Hackathon (SIH)",
+    role: "SIH Participant & Prototyper",
+    fullTitle: "Smart India Hackathon (SIH) — Participant & Prototyper",
+    organization: "Ministry of Education • Govt. of India",
+    category: "National Innovation Sprint",
+    badge: "SIH PARTICIPANT",
     iconName: "Rocket",
     logo: "/logos/hackathons-sih.png",
     logoBg: "#ffffff",
     accentColor: "#b8ff4d",
     description:
-      "Finalist in MECIA HACKS 3.O and active participant in competitive hackathons including the Smart India Hackathon (SIH), building scalable software prototypes, AI-driven solutions, and collaborative systems under intense time-constrained sprint environments.",
-    tags: ["Finalist: MECIA HACKS 3.O", "Smart India Hackathon", "Rapid Prototyping", "Sprint"]
+      "Active participant in competitive hackathons including the premier Smart India Hackathon (SIH), building scalable software prototypes, AI-driven solutions, and collaborative systems under intense time-constrained sprint environments tackling national problem statements.",
+    tags: ["Smart India Hackathon", "SIH Participant", "Rapid Prototyping", "Sprint Innovation"]
   },
   {
     id: "unstop-champion",

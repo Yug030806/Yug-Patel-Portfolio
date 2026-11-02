@@ -19,7 +19,7 @@ export default function Contact() {
     <section id="contact" className="section-shell section-padding contact-section">
       <div className="section-header-eyebrow">
         <span className="eyebrow-rule" />
-        <span className="eyebrow-text">05 / CONTACT</span>
+        <span className="eyebrow-text">06 / CONTACT</span>
       </div>
 
       <motion.div

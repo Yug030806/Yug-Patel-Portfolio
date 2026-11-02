@@ -10,7 +10,8 @@ const NAV_ITEMS = [
   { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
   { label: "Skills", id: "skills" },
-  { label: "Achievements & Activities", id: "achievement" },
+  { label: "Achievements", id: "achievements" },
+  { label: "Activities", id: "activities" },
   { label: "Contact", id: "contact" }
 ];
 
@@ -27,7 +28,7 @@ export default function Navbar() {
 
       if (!isHome) return;
 
-      const sections = ["home", "about", "projects", "skills", "achievement", "contact"];
+      const sections = ["home", "about", "projects", "skills", "achievements", "activities", "contact"];
       const scrollPos = window.scrollY + 160;
 
       for (let i = sections.length - 1; i >= 0; i--) {

@@ -1,14 +1,34 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Download, Github, Linkedin, Mail, Sparkles, Terminal, Camera } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, Sparkles, Terminal, Camera, Maximize2, X } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 import InteractiveScene from "./InteractiveScene";
 
 export default function Hero() {
   const [profileImage, setProfileImage] = useState("/profile.png");
+  const [modalOpen, setModalOpen] = useState(false);
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    if (!modalOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setModalOpen(false);
+      }
+    };
+
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [modalOpen]);
 
   useEffect(() => {
     // Check localStorage for user-uploaded custom photo
@@ -42,7 +62,8 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-section">
+    <>
+      <section id="home" className="hero-section">
       <div className="hero-backdrop-glow glow-primary" />
       <div className="hero-backdrop-glow glow-secondary" />
       <div className="hero-grid-pattern" />
@@ -58,13 +79,13 @@ export default function Hero() {
           <div className="hero-profile-card">
             <div
               className="hero-avatar-frame"
-              onClick={() => fileInputRef.current?.click()}
-              title="Click to choose or change your profile photo"
+              onClick={() => setModalOpen(true)}
+              title="Click to view full photo"
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
-                  fileInputRef.current?.click();
+                  setModalOpen(true);
                 }
               }}
             >
@@ -78,8 +99,8 @@ export default function Hero() {
                 <span className="status-ping-ring" />
               </span>
               <div className="hero-avatar-upload-overlay">
-                <Camera size={14} />
-                <span className="overlay-badge-text">PHOTO</span>
+                <Maximize2 size={16} />
+                <span className="overlay-badge-text">VIEW</span>
               </div>
               <input
                 ref={fileInputRef}
@@ -211,5 +232,70 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  );
+
+    {/* Profile Photo Lightbox Modal */}
+    <AnimatePresence>
+      {modalOpen && (
+        <motion.div
+          className="cert-modal-backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setModalOpen(false)}
+        >
+          <motion.div
+            className="cert-modal-window profile-modal-window"
+            initial={{ scale: 0.92, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.92, opacity: 0 }}
+            transition={{ type: "spring", damping: 25, stiffness: 220 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="cert-modal-header">
+              <div className="modal-title-group">
+                <h3>Yug Patel</h3>
+                <span>Software Developer • Computer Engineering</span>
+              </div>
+              <div className="modal-top-actions">
+                <a
+                  href={profileImage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="modal-icon-btn"
+                  title="Open full size in new tab"
+                >
+                  <ArrowUpRight size={18} />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="modal-icon-btn"
+                  title="Change Photo"
+                  aria-label="Upload new photo"
+                >
+                  <Camera size={16} />
+                </button>
+                <button
+                  onClick={() => setModalOpen(false)}
+                  className="modal-icon-btn close-btn"
+                  aria-label="Close photo preview"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+
+            <div className="cert-modal-body profile-modal-body">
+              <img
+                src={profileImage}
+                alt="Yug Patel"
+                className="modal-full-img profile-modal-img"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </>
+);
 }

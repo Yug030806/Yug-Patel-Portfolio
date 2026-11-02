@@ -2869,6 +2869,12 @@ button {
 /* ==================================================
    ACHIEVEMENT SECTION
 ================================================== */
+.achievements-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
 .achievement-feature-box {
   position: relative;
   border: 1px solid rgba(184, 255, 77, 0.35);
@@ -2974,6 +2980,30 @@ button {
 
 .meta-icon {
   color: var(--accent);
+}
+
+.achievement-tags-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.achievement-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.achievement-feature-box:hover .achievement-tag {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .achievement-actions {
@@ -3192,6 +3222,20 @@ button {
   border: 1px solid var(--line);
 }
 
+.profile-modal-window {
+  max-width: 520px;
+}
+
+.profile-modal-body {
+  padding: 24px;
+}
+
+.profile-modal-img {
+  max-height: 68vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+}
+
 /* ==================================================
    ACHIEVEMENTS & ACTIVITIES EXTENSIONS
 ================================================== */
@@ -3252,6 +3296,14 @@ button {
 .achievement-filter-btn.active .filter-count-badge {
   background: rgba(0, 0, 0, 0.2);
   color: #07080a;
+}
+
+.activities-section {
+  position: relative;
+}
+
+.activities-filter-bar {
+  margin-bottom: 32px;
 }
 
 .activities-container {
